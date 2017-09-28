@@ -1,2 +1,2 @@
 # HackerRank-Submissions
-My passing submissions for HackerRank challenges
+Some of my passing submissions for HackerRank challenges

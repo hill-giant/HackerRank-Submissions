@@ -41,25 +41,6 @@ void DFS(Graph const &graph, int v){
             DFS(graph, i);
         }
     }
-    /*    stack<int> stack;
-    stack.push(i);
-    while (!stack.empty())
-    {
-        i = stack.top();
-        stack.pop();
-        if (!visited[i])
-        {
-            visited[i] = true;
-            paved_roads++;
-        }
-        for (vector<int>::iterator it = adj[i].begin(); 
-                it != adj[i].end(); it++){
-            if (!visited[*it]){
-                visited[*it] = true;        
-                paved_roads++;       
-            }
-        }
-    } */
 }
 
 int main(int argc, char * argv[]){
@@ -82,7 +63,6 @@ int main(int argc, char * argv[]){
             e.destination = city_2 - 1;
             edges.push_back(e);
         }
-        //cout << edges.size() << endl;
         Graph graph(n, edges);
         if (x > y){
             for (int i = 0; i < n; ++i){

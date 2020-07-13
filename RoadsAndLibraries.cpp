@@ -19,7 +19,7 @@ class Graph{
         for (int i = 0; i < edges.size(); ++i){
             int source = edges[i].source;
             int destination = edges[i].destination;
-            
+
             adj[source].push_back(destination);
             adj[destination].push_back(source);
         }
@@ -76,5 +76,5 @@ int main(int argc, char * argv[]){
         }
         cout << total << "\n";
     }
-    return 0;    
+    return 0;
 }

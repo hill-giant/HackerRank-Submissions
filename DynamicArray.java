@@ -33,6 +33,6 @@ public class DynamicArray
                     System.out.println(last);
                     break;
             }
-        }                    
+        }
     }
 }

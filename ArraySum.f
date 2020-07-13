@@ -17,7 +17,7 @@ PROGRAM main
     INTEGER, ALLOCATABLE, DIMENSION (:) :: a
     INTEGER :: n
     INTEGER :: a_sum
-    INTEGER :: i 
+    INTEGER :: i
     READ *, n
     ALLOCATE(a(n))
     READ(*, *) a

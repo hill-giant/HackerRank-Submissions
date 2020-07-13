@@ -24,10 +24,10 @@ int main() {
             if (v[j] > 0)
                 pos_sum += v[j];
         }
-        cout << mx << " " 
+        cout << mx << " "
             << (pos_sum > mx && pos_sum != 0 ? pos_sum : mx) << endl;
-        
+
     }
     return 0;
 }
-        
+

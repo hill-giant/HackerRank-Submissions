@@ -1,2 +1,4 @@
 # HackerRank-Submissions
-Some of my passing submissions for HackerRank challenges
+All of my passing HackerRank submissions, including the easies and the uglies.
+
+Submissions are parsed from exported account data using ParseHRSubmissions.ps1.

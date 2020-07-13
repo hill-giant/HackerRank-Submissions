@@ -2,7 +2,8 @@ param(
     [String]$Path
 )
 
-<# A script for parsing passing submissions from exported HackerRank data.
+<# 
+   A script for parsing passing submissions from exported HackerRank data.   
 
    TODO: Figure out how to accomplish this with Bash + jq.
 #>
@@ -19,7 +20,6 @@ $languages = $data.submissions.language |
 
 foreach ($language in $languages)
 {
-
     switch ($language)
     {
         { $language -match "python"     } { $extension = "py" ; break }
@@ -30,11 +30,16 @@ foreach ($language in $languages)
         default { $extension = $language -replace "\d" ; break }
     }
 
+    if (-not (Test-Path ".\$language\"))
+    {
+        New-Item ".\$language" -ItemType Directory
+    }
+
     $submissions = $data.submissions | Where-Object { $_.Score -eq 1.0 -and $_.language -eq $language }
     foreach ($submission in $submissions)
     {
         $challenge = $submission.challenge -replace "\W"
         $code = $submission.code
-        Add-Content ".\$challenge.$extension" $code -Force
+        Add-Content ".\$language\$challenge.$extension" $code -Force
     }
 }

@@ -40,6 +40,6 @@ foreach ($language in $languages)
     {
         $challenge = $submission.challenge -replace "\W"
         $code = $submission.code
-        Add-Content ".\$language\$challenge.$extension" $code -Force
+        Set-Content ".\$language\$challenge.$extension" $code -Force
     }
 }

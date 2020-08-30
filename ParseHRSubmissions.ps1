@@ -22,11 +22,13 @@ foreach ($language in $languages)
 {
     switch ($language)
     {
-        { $language -match "python"     } { $extension = "py" ; break }
-        { $language -match "javascript" } { $extension = "js" ; break }
-        { $language -match "bash"       } { $extension = "sh" ; break }
-        { $language -match "csharp"     } { $extension = "cs" ; break }
-        { $language -match "fortran"    } { $extension = "f"  ; break }
+        { $language -match "python"                            } { $extension = "py"  ; break }
+        { $language -match "javascript"                        } { $extension = "js"  ; break }
+        { $language -match "bash"                              } { $extension = "sh"  ; break }
+        { $language -match "csharp"                            } { $extension = "cs"  ; break }
+        { $language -match "fortran"                           } { $extension = "f"   ; break }
+        { $language -match "ruby"                              } { $extension = "rb"  ; break }
+        { $language -match "oracle" -or $language -match "sql" } { $extension = "sql" ; break }
         default { $extension = $language -replace "\d" ; break }
     }
 
